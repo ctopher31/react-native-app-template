@@ -8,11 +8,11 @@ var {
   StyleSheet
 } = React;
 
-var SampleBookScreen = React.createClass({
+var CollectionsView = React.createClass({
   render: function() {
     return (
       <View style={styles.container}>
-        <Text style={styles.title}>Sample Books</Text>
+        <Text style={styles.title}>Collections</Text>
       </View>
     );
   }
@@ -50,4 +50,4 @@ var styles = StyleSheet.create({
   }
 });
 
-module.exports = SampleBookScreen;
+module.exports = CollectionsView;

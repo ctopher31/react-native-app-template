@@ -8,27 +8,11 @@ var {
   StyleSheet
 } = React;
 
-var ResultsScreen = require('./ResultsScreen');
-
-var SearchScreen = React.createClass({
-  gotoResultsScreen: function(searchPhrase) {
-    this.props.navigator.push({
-      title: 'Results',
-      component: ResultsScreen,
-      passProps: {'searchPhrase': searchPhrase}
-    });
-  },
+var SampleBookView = React.createClass({
   render: function() {
     return (
       <View style={styles.container}>
-        <Text style={styles.title}>Book Browser</Text>
-        <Text style={styles.label}>Find Books containing:</Text>
-        <TextInput
-          placeholder='e.g. JavaScript or Mobile'
-          returnKeyType='search'
-          enableReturnKeyAutomatically={true}
-          onEndEditing={event => this.gotoResultsScreen(event.nativeEvent.text)}
-          style={styles.textInput}/>
+        <Text style={styles.title}>Sample Books</Text>
       </View>
     );
   }
@@ -66,4 +50,4 @@ var styles = StyleSheet.create({
   }
 });
 
-module.exports = SearchScreen;
+module.exports = SampleBookView;

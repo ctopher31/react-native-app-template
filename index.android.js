@@ -11,15 +11,15 @@ var {
   Navigator
 } = React;
 
-var SearchScreen = require('./SearchScreen');
+var MainView = require('./App/MainView');
 
 var BookBrowser = React.createClass({
   render: function() {
     return (
       <Navigator
         initialRoute={{
-          component: SearchScreen,
-          title: 'Search',
+          component: MainView,
+          title: 'Vertical Blinds Sample Book',
         }}
         style={styles.navContainer}/>
     );

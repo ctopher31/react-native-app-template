@@ -8,7 +8,7 @@ var {
   StyleSheet
 } = React;
 
-var ProductCatalogScreen = React.createClass({
+var ProductCatalogView = React.createClass({
   render: function() {
     return (
       <View style={styles.container}>
@@ -50,4 +50,4 @@ var styles = StyleSheet.create({
   }
 });
 
-module.exports = ProductCatalogScreen;
+module.exports = ProductCatalogView;
