@@ -23,6 +23,7 @@ var MainView = React.createClass({
     //console.log(this.props.navigator);
     return (
       <View style={styles.container}>
+        <MenuView navigator={this.props.navigator} menu={this.gotoView} />
         <IntroView />
       </View>
     );
@@ -36,7 +37,7 @@ var styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'stretch',
     backgroundColor: '#FFF',
-    paddingTop: 65
+    paddingTop: 0
   }
 });
 
