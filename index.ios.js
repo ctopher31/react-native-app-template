@@ -15,11 +15,11 @@ var {
   StyleSheet
 } = React;
 
-var MainView = require('./App/MainView');
-var SearchView = require('./App/SearchView');
-var ProductCatalogView = require('./App/ProductCatalogView');
-var CollectionsView = require('./App/CollectionsView');
-var SampleBookView = require('./App/SampleBookView');
+var MainView = require('./app/MainView');
+var SearchView = require('./app/SearchView');
+var ProductCatalogView = require('./app/ProductCatalogView');
+var CollectionsView = require('./app/CollectionsView');
+var SampleBookView = require('./app/SampleBookView');
 
 var BookBrowser = React.createClass({
   getInitialState: function() {
@@ -28,8 +28,9 @@ var BookBrowser = React.createClass({
     }
   },
   changeTab: function(tabName) {
+    this.refs.nav.navigator.popToTop();
     this.setState({
-      selectedTab: tabName
+      selectedTab: tabName,
     });
   },
   render: function() {

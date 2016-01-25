@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+http://www.apache.org/licenses/LICENSE-2.0
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+<html lang="en">
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+        https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+        * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+        * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+        * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+        * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="description" content="Product Catalog section of Budget Blinds - Signature Series Vertical Blinds Sample Book App.">
+        <title>Product Catalog - Vertical Blinds Sample Book | Budget Blinds - Signature Series | Middleton, WI</title>
+        <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+        <link rel="stylesheet" type="text/css" href="../css/product-catalog.css">
+    </head>
+    <body id="product-catalog-2">
+        <div class="app catalog">
+            <header>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12 pad-top">
+                            <div class="back-icon pull-left">
+                                <a class="nav-link pc-home pull-left" href="../product-catalog.html"><span class="page-right">&lsaquo;</span><span class="pc-swipe">Back</span></a>
+                            </div>
+                            <div class="home-icon pull-left">
+                                <a class="nav-link pc-home pull-left" href="../product-catalog.html"><img src="../assets/images/home.png" alt="Vertical Blinds Sample Book"></a>
+                            </div>
+                            <div class="product-title">
+                                <h2>Product Catalog</h2>
+                            </div>
+                            <div class="forward-icon pull-right">
+                                <a class="nav-link pc-back pull-right" href="product-catalog-3.html"><span class="pc-swipe">Page 3</span><span class="page-left">&rsaquo;</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <section class="pc-2">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6 black-bg">
+                            <article class="intro">
+                                <div class="intro-header">
+                                    <img src="../assets/images/v-logo.png" alt="Vertical Blinds">
+                                    <h1><span class="vbpurple-text">Fabric</span> Vertical Blinds</h1>
+                                </div>
+                                <p>If your decorating plans call for a touch of warmth and texture, choose Signature Series Fabric Vertical Blinds. The fashionable textiles complement your personal style with the latest trends in interior design. Individual weights sewn into each fabric vane allow you to control them easily and provide smooth fabric flow.</p>
+                                <p>With an array of fabrics and vane options, Signature Series Fabric Vertical Blinds provide varying degrees of light control. In rooms requiring minimal light control, lightweight fabrics let the sunlight filter in. When you need room-darkening options or increased privacy, choose a heavier fabric. And whichever textile you choose, adding a channel panel increases light control. These opaque backing vanes provide stability, privacy, and a neutral outward-facing appearance but are nearly undetectable and won’t conceal the fabric you love.</p>
+                            </article>
+                        </div>
+                        <div class="col-md-6 white-bg">
+                            <aside>
+                                <img class="img-responsive center-block" src="../assets/images/pc-2.jpg" alt="Vertical Blinds Sample Book">
+                                <p class="caption">Fabric Vertical Blinds with Cord and Chain Control: Selene, Thoroughfare 90181; Drapery with Pinch Pleats: Mercedes, Steel 90024</p>
+                            </aside>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <footer class="bottom">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="swipe text-center">
+                            <i class="fa">&lsaquo;</i>
+                            <p>swipe</p>
+                            <i class="fa">&rsaquo;</i>
+                        </div>
+                        <div class="page-number text-center pull-right">
+                            <p>2</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script type="text/javascript" src="../cordova.js"></script>
+        <script type="text/javascript" src="../js/index.js"></script>
+        <script type="text/javascript" src="../js/jquery.min.js"></script>
+        <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="../js/touche.min.js"></script>
+        <script type="text/javascript" src="../js/hammer.min.js"></script>
+        <script type="text/javascript" src="../js/app.js"></script>
+    </body>
+</html>

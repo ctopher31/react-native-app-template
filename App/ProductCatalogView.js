@@ -4,49 +4,82 @@ var React = require('react-native');
 var {
   View,
   Text,
-  TextInput,
+  Image,
+  TouchableOpacity,
   StyleSheet
 } = React;
 
+var PCFabricVerticalBlindsView = require('./product_catalog/PCFabricVerticalBlindsView');
+var ProductCatalogView = require('./ProductCatalogView');
+var CollectionsView = require('./CollectionsView');
+var SampleBookView = require('./SampleBookView');
+
 var ProductCatalogView = React.createClass({
+  gotoView: function(view) {
+    console.log('Go to view: ' + view);
+    this.props.navigator.push({
+      title: view.title,
+      component: view.component,
+      passProps: {}
+    });
+  },
   render: function() {
+    console.log(this.props.navigator);
+    console.log(this.props.menu);
     return (
-      <View style={styles.container}>
-        <Text style={styles.title}>Product Catalog</Text>
+      <View style={styles.menuContainer}>
+        <TouchableOpacity style={styles.menuItem} onPress={event => this.gotoView({component:PCFabricVerticalBlindsView,title:'Fabric Vertical Blinds'})}>
+          <Text style={styles.menuLabel}>Fabric Vertical Blinds</Text><Text style={styles.menuAngle}>&rsaquo;</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.menuItem} onPress={event => this.gotoView({component:SearchView,title:'Search'})}>
+          <Text style={styles.menuLabel}>Sheer Vertical Blinds</Text><Text style={styles.menuAngle}>&rsaquo;</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.menuItem} onPress={event => this.gotoView({component:SearchView,title:'Search'})}>
+          <Text style={styles.menuLabel}>Vinyl Vertical Blinds</Text><Text style={styles.menuAngle}>&rsaquo;</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.menuItem} onPress={event => this.gotoView({component:SearchView,title:'Search'})}>
+          <Text style={styles.menuLabel}>2&quot; Vinyl Horizontal Blinds</Text><Text style={styles.menuAngle}>&rsaquo;</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.menuItem} onPress={event => this.gotoView({component:SearchView,title:'Search'})}>
+          <Text style={styles.menuLabel}>Layer Your Look</Text><Text style={styles.menuAngle}>&rsaquo;</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.menuItem} onPress={event => this.gotoView({component:SearchView,title:'Search'})}>
+          <Text style={styles.menuLabel}>Create A Cohesive Design</Text><Text style={styles.menuAngle}>&rsaquo;</Text>
+        </TouchableOpacity>
       </View>
     );
   }
 });
 
 var styles = StyleSheet.create({
-  container: {
+  menuContainer: {
     flex: 1,
     flexDirection: 'column',
-    justifyContent: 'flex-start',
+    flexWrap: 'nowrap',
+    justifyContent:  'center',
     alignItems: 'center',
-    backgroundColor: '#5AC8FA',
-    paddingTop: 100
+    backgroundColor: '#000',
+    paddingTop: 40,
+    paddingBottom: 40,
   },
-  title: {
+  menuItem: {
+    flex: 0,
+    flexDirection: 'row',
+    flexWrap: 'nowrap',
+  },
+  menuLabel: {
+    minWidth: 44,
+    minHeight: 44,
     fontSize: 18,
-    fontWeight: 'bold',
-    color: '#FFF',
-    marginBottom: 30
+    color: '#7967AD',
+    margin: 10
   },
-  label: {
-    fontSize: 14,
-    color: '#FFF',
-    marginBottom: 10
-  },
-  textInput: {
-    fontSize: 14,
-    borderColor: '#8e8e93',
-    borderWidth: 0.5,
-    backgroundColor: '#FFF',
-    height: 40,
-    marginLeft: 60,
-    marginRight: 60,
-    padding: 8
+  menuAngle: {
+    minWidth: 44,
+    minHeight: 44,
+    fontSize: 36,
+    color: '#7967AD',
+    marginTop: -3
   }
 });
 
